@@ -20,13 +20,14 @@ from numba import cuda
 
 
 import sys
-sys.path.insert(0, '../')
+sys.path.append("data")
+
 
 import os
 current_path = os.path.dirname(os.path.abspath(__file__))
 sys.path.append('/Users/tianyuliu/CodeProjects/kaggle/LLM_Detect/LLM_Detect') 
 
-train_csv_loc = "../data/input/llm-detect-ai-generated-text/train_essays.csv"
+train_csv_loc = "/data/input/llm-detect-ai-generated-text/train_essays.csv"
 train_csv = pd.read_csv(train_csv_loc)
 
 
