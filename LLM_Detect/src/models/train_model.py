@@ -18,12 +18,15 @@ import transformers
 from transformers import BertTokenizer, TFBertForSequenceClassification
 from numba import cuda
 
-
-import sys
-sys.path.append("data")
-
-
 import os
+import sys
+# sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
+
+sys.path.insert(0, '../data')
+
+
+
 current_path = os.path.dirname(os.path.abspath(__file__))
 sys.path.append('/Users/tianyuliu/CodeProjects/kaggle/LLM_Detect/LLM_Detect') 
 
